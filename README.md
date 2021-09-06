@@ -1,2 +1,2 @@
 # INDUSTRIO2021
-Official Website of INDUSTRIO 2021!
+The Official Website of INDUSTRIO 2021!
