@@ -52,7 +52,7 @@
 }
 
 @media (min-width: 1200px) {
-  .slide-content h1,h2 {
+  .slide-content h1, h2 {
     font-size: 60px;
   }
 
