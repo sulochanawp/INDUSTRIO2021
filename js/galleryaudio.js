@@ -55,3 +55,15 @@ function playAudio5() {
 function pauseAudio5() {
   x5.pause();
 }
+
+
+var x6 = document.getElementById("myAudio6");
+
+function playAudio6() {
+  x6.play();
+}
+
+function pauseAudio6() {
+  x6.pause();
+}
+
