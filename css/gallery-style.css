@@ -1,0 +1,194 @@
+
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.button {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 500;
+  color: white;
+  background: #56C596;
+  padding: .5em 1.25em;
+  border-radius: 4px;
+}
+
+.button:hover {
+  background: #329D9C;
+  color: white !important;
+}
+
+.button:focus {
+  color: white !important;
+}
+
+.portfolio {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1.5em;
+  background: transparent;
+
+}
+
+.portfolio__item {
+  position: relative;
+  -ms-flex-preferred-size: 30%;
+  flex-basis: 30%;
+  margin: 0;
+  padding: 0;
+  background: #205072;
+  will-change: transform;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-box-shadow: 0px 0px 50px -6px rgba(0,0,0,0.13);
+  box-shadow: 0px 0px 50px -6px rgba(0,0,0,0.13);
+}
+
+.portfolio__item:hover{
+  -webkit-box-shadow: 0px 0px 39px -6px rgba(0,0,0,0.39);
+  box-shadow: 0px 0px 39px -6px rgba(0,0,0,0.39);
+  -moz-transform: scale(1.02);
+  -webkit-transform: scale(1.02);
+  -o-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  transform: scale(1.02);
+}
+
+.portfolio__desc {
+  padding: 1em;
+}
+
+.portfolio__title {
+  font-size: 1.5em;
+  margin-top: 0;
+  color: #fff;
+}
+
+.portfolio__image,
+.portfolio-lightbox__image {
+  width: 100%;
+  display: block;
+}
+
+.portfolio-lightbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: white;
+  background: rgba(0, 0, 0, 0.85);
+  width:100%;
+  height: 100%;
+  z-index: 10;
+  visibility: hidden;
+  transition: background 0.25s ease-out, visibility 0.1s ease;
+  will-change: background, visibility;
+}
+
+.portfolio-lightbox:target {
+  visibility: visible;
+}
+
+.portfolio-lightbox__content {
+  position: absolute;
+  width: 70%;
+  padding: 0.2em;
+  background: white;
+  will-change: transform;
+  transform: scale(0);
+  transition: all 500ms ease;
+}
+
+
+.portfolio-lightbox:target .portfolio-lightbox__content {
+    transform: scale(1);
+}
+
+
+@media (max-width: 1500px) {
+  .portfolio-lightbox__content {
+    width: 64%;
+  }
+}
+
+@media (max-width: 1400px) {
+  .portfolio-lightbox__content {
+    width: 68%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .portfolio-lightbox__content {
+    width: 79%;
+  }
+}
+
+@media (max-width: 1130px) {
+  .portfolio-lightbox__content {
+    width: 84%;
+  }
+}
+
+@media (max-width: 1089px) {
+  .portfolio-lightbox__content {
+    width: 85%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .portfolio-lightbox__content {
+    width: 100%;
+  }
+}
+
+.portfolio__lightbox__image {
+  margin-bottom: 1em;
+}
+
+.closebtn {
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 2rem;
+  height: 2rem;
+  border: 3.5px solid white;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-decoration: none;
+  -webkit-box-shadow: 1px 1px 28px 5px rgba(0,0,0,0.56);
+  box-shadow: 1px 1px 28px 5px rgba(0,0,0,0.56);
+  transition: all 0.25s ease-out;
+}
+
+.closebtn:hover {
+  background: #329D9C;
+}
+
+.closebtn::after {
+  content: "✖";
+  font-size: 1.3rem;
+  color: white;
+}
